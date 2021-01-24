@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>注册</title>
+  <link rel="stylesheet" href="./download/font_2281855_gz5a3ur02q/iconfont.css">
+  <link rel="stylesheet" href="./css/注册界面.css">
+</head>
+<body style="background-image:url(./imges/reg_bg_min.jpg) ;">
+  <div class="cover-up">
+    <div class="login">
+      <i class="iconfont" id="sign-out">&#xe640;</i>
+      <div class="logo2" ><a href="#" style="background-image: url(./imges/下载.png);"contenteditable="false"></a><span>用户名密码登录</span></div>
+      <div>
+        <i class="iconfont" id="sign-out-1">&#xe640;</i>
+        <input type="text" placeholder="用户名/手机号" id="login-name">
+        <span class="password-red">请输入密码</span>
+        <span class="name-red">请您输入手机/用户名</span>
+      </div>
+      <div>
+        <i class="iconfont" id="sign-out-2" >&#xe640;</i>
+        <input type="password"placeholder="请输入密码" class="login-password">
+      </div>
+      <button class="login-button">登入</button>
+      <div class="login-buttom">
+        <div class="login-register"><a href="">立即注册</a></div>
+      </div>
+      <p class="login-a"><a href="javaScript:;">忘记密码？</a></p>
+    </div>
+  </div>
+  <!-- contenteditable 元素内容是否可编辑 -->
+  <div class="logo" ><a href="#" style="background-image: url(./imges/baidu.png);" contenteditable="false"></a></div>
+  <div class="text1"><p class="h3">用科技</p><p class="h5">让复杂的世界更简单</p></div>
+  <div class="form-wrapper">
+    <div class="form-top">
+      <p class="text2">欢迎注册</p>
+      <p class="text3">已有账号？<a id="dl">登录</a></p>
+    </div>
+    <form action="" class="form" autocomplete="off">
+      <!-- 用户名 -->
+       <div class="form-man user-name">
+         <div class="tips" >
+           <p class="tips-word">设置后不可更改，中英文均可，最长14个英文或7个汉字</p>
+           <p class="triangle"></p>
+         </div>
+         <div class="green iconfont" id="confirm">&#xe620;</div>
+         <label for="user-name" name="user" >用户名</label>
+         <input type="text" name="fname" id="user-name" placeholder="请设置用户名" autofocus="ture">
+         <p class="tips-name">用户名仅支持中英文、数字和下划线,且不能为纯数字</p>
+       </div>
+       <!-- 电话 -->
+       <div class="form-man phone-number">
+        <div class="green iconfont" id="number">&#xe620;</div>
+        <label for="phone-number" name="" >手机号</label>
+        <input type="text" name="fnumber" id="phone-number" placeholder="可用于登入和找回密码">
+        <p class="tips-name">手机号码格式不正确</p>
+       </div>
+       <!-- 密码 -->
+       <div class="form-man password">
+           <!-- 密码提示 -->
+        <div id="tips-password">
+          <p class="tips-password"><i class="iconfont reach" >&#xe617; </i><i class="iconfont error">&#xe640; </i><span class="pass-content">长度为8~14个字符</span><br><i class="iconfont reach">&#xe617; </i><i class="iconfont error">&#xe640; </i><span class="pass-content">字母/数字以及标点符号至少包含2种</span><br><i class="iconfont reach">&#xe617; </i><i class="iconfont error">&#xe640; </i><span class="pass-content">不允许有空格、中文</span></p>
+          <p class="triangle-pasword"></p>
+        </div>
+        <p><i class="iconfont" id="open">&#xe641;</i></p>
+        <p><i class="iconfont" id="close">&#xe6ba;</i></p>
+        <i class="iconfont" id="password-tips">&#xe62a;</i>
+        <div class="green iconfont" id="password-greem">&#xe620;</div>
+        <label for="password" name="user" >密码</label>
+        <input type="password" name="fpassword" id="password" placeholder="请设置登入密码">
+        <div></div>
+        <p class="tips-name">密码设置不符合要求</p>
+       </div>
+   
+       <div class="form-man verification">
+        <label for="verification" name="user" >验证码</label>
+        <input type="text" id="verification" placeholder="请输入验证码">
+        <button id="verification-button">获取验证码</button>
+        <p class="tips-name">验证码错误</p>
+        <p class="code">1111</p>
+       </div>
+       <div class="register">
+         <button type="button" class="buttom-register" >注册</button>
+       </div>
+       <div class="clause">
+         <input type="checkbox" class="checkbox" checked="checked"> 阅读并接受 <a href="#">《百度用户协议》</a>及<a href="#">《百度隐私权保护声明》</a></br>
+       </div>
+    </form>   
+  </div>
+  <script type="" src="./js/注册界面.js"></script>
+</body>
+</html>
