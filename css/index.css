@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+ul,
+li {
+  list-style: none;
+}
+.type-area {
+  width: 1250px;
+  margin: 0 auto;
+}
+header {
+  display: none;
+}
+header .header-bgc {
+  height: 30px;
+  background-color: #940101;
+}
+nav {
+  float: left;
+  width: 30%;
+  height: 300px;
+  background-color: #000000;
+}
+main {
+  float: right;
+  width: 65%;
+  height: 300px;
+  background-color: #000000;
+}

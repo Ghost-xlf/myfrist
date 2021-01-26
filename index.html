@@ -1,123 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>vue</title>
-  <link rel="stylesheet" href="index1/css/注册界面.css">
+  <title>热心市民小许的</title>
+  <link rel="stylesheet" href="./css/index.css">
 </head>
-<body>
-   <div id="app-vue" :style="bgc">
-     <div class="cover-up"></div>
-     <div class="logo"><logo :title='logo_img'></logo></div>
-     <div class="text1"><text_ :text = 'textA'></text_></div>
-     <div class="form-wrapper">
-      <div class="form-top">
-        <p class="text2">{{textA.textB_1}}</p>
-        <p class="text3">{{textA.textB_2}}<a id="dl">{{textA.textB_3}}</a></p>
-      </div>
-      <form action="" class="form" autocomplete="off">
-        <!-- 用户名 -->
-         <div class="form-man user-name">
-           <div class="tips" >
-             <p class="tips-word">{{tips_word}}}</p>
-             <p class="triangle"></p>
-           </div>
-           <div class="green iconfont" id="confirm">&#xe620;</div>
-           <label for="user-name" name="user" >用户名</label>
-           <input type="text" name="fname" @click = 'focus_A'  id="user-name" placeholder="请设置用户名" autofocus="ture">
-           <p class="tips-name">{{tips_name}}</p>
-         </div>
-         <!-- 电话 -->
-         <div class="form-man phone-number">
-          <div class="green iconfont" id="number">&#xe620;</div>
-          <label for="phone-number" name="" >手机号</label>
-          <input type="text" name="fnumber" id="phone-number" placeholder="可用于登入和找回密码">
-          <p class="tips-name">手机号码格式不正确</p>
-         </div>
-         <!-- 密码 -->
-         <div class="form-man password">
-             <!-- 密码提示 -->
-          <div id="tips-password">
-            <p class="tips-password"><i class="iconfont reach" >&#xe617; </i><i class="iconfont error">&#xe640; </i><span class="pass-content">长度为8~14个字符</span><br><i class="iconfont reach">&#xe617; </i><i class="iconfont error">&#xe640; </i><span class="pass-content">字母/数字以及标点符号至少包含2种</span><br><i class="iconfont reach">&#xe617; </i><i class="iconfont error">&#xe640; </i><span class="pass-content">不允许有空格、中文</span></p>
-            <p class="triangle-pasword"></p>
-          </div>
-          <p><i class="iconfont" id="open">&#xe641;</i></p>
-          <p><i class="iconfont" id="close">&#xe6ba;</i></p>
-          <i class="iconfont" id="password-tips">&#xe62a;</i>
-          <div class="green iconfont" id="password-greem">&#xe620;</div>
-          <label for="password" name="user" >密码</label>
-          <input type="password" name="fpassword" id="password" placeholder="请设置登入密码">
-          <div></div>
-          <p class="tips-name">密码设置不符合要求</p>
-         </div>
-     
-         <div class="form-man verification">
-          <label for="verification" name="user" >验证码</label>
-          <input type="text" id="verification" placeholder="请输入验证码">
-          <button id="verification-button">获取验证码</button>
-          <p class="tips-name">验证码错误</p>
-          <p class="code">1111</p>
-         </div>
-         <div class="register">
-           <button type="button" class="buttom-register" >注册</button>
-         </div>
-         <div class="clause">
-           <input type="checkbox" class="checkbox" checked="checked"> 阅读并接受 <a href="#">《百度用户协议》</a>及<a href="#">《百度隐私权保护声明》</a></br>
-         </div>
-      </form>   
-     </div>
-   </div>
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script>
-    Vue.component('logo' ,{
-      template:'<a href = "#" :style="title" ></a>',
-      props:["title"]
-    });
-    Vue.component("text_" ,{
-      template: `<div>
-                 <p class="h3">{{text.textA_1}}</p>
-                 <p class="h3">{{text.textA_2}}</p>
-                 </div>`,
-      props: ['text']
-    });
-    Vue.directive("focus",{
-     inserted:function(e) {
-       e.focus();
-     }
-   });
-    var app = new Vue({
-      el:"#app-vue",
-      data:{
-       bgc: {
-        backgroundImage: "url(" + './imges/reg_bg_min.jpg' + ')',
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        height: "100%",
-       },
-       logo_img: {
-         backgroundImage:"url("+ './imges/baidu.png'+")"
-       },
-       textA: {
-         textA_1: "用科技",
-         textA_2: "让复杂的世界更简单",
-         textB_1: "欢迎注册",
-         textB_2: "已有账号？",
-         textB_3: "登录",
-       },
-       tips_word: '设置后不可更改，中英文均可，最长14个英文或7个汉字',
-       tips_name: "用户名仅支持中英文、数字和下划线,且不能为纯数字",
-       focus_:"false",
-
-   
-      },
-      methods: {
-       focus_A: function(){
-         console.log("1");
-       },
-      },
-
-    })
-  </script>
+<body class="type-area">
+  <header>
+    <div class="header-bgc"></div>
+  </header>
+  <nav class="clearfix"></nav>
+  <main class="clearfix"></main>
+  <script src="./js/TweenMax.min.js"></script>
+  <script src="./js/Preloader.js"></script>
+  <script src="./js/s.js"></script>
 </body>
 </html>
