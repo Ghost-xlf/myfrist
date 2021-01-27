@@ -2,9 +2,9 @@
 //Pure JS, completely customizable preloader from GreenSock.
 //Once you create an instance like var preloader = new GSPreloader(), call preloader.active(true) to open it, preloader.active(false) to close it, and preloader.active() to get the current status. Only requires TweenLite and CSSPlugin (https://www.greensock.com/gsap/)
 var preloader = new GSPreloader({
-radius:20,  //半径
+radius:30,  //半径
 dotSize:15, //圆点大小
-dotCount:7, //多少点
+dotCount:8, //多少点
 colors:["#61AC27","#555","purple","#FF6600"], //have as many or as few colors as you want.
 boxOpacity:0.1,
 boxBorder:"1px solid #AAA",
@@ -22,6 +22,7 @@ preloader.active( !preloader.active() );
 //this is the whole preloader class/function
 function GSPreloader(options) {
 options = options || {};
+var po = document.querySelector(".po");
 var parent = options.parent || document.body,
     element = this.element = document.createElement("div"),
     radius = options.radius || 42,
@@ -30,6 +31,7 @@ var parent = options.parent || document.body,
     createDot = function(rotation) {
         var dot = document.createElement("div");
       element.appendChild(dot);
+      po.appendChild(element);
       TweenLite.set(dot, {width:dotSize, height:dotSize, transformOrigin:(-radius + "px 0px"), x: radius, backgroundColor:colors[colors.length-1], borderRadius:"50%", force3D:true, position:"absolute", rotation:rotation});
       dot.className = options.dotClass || "preloader-dot";
       return dot; 
@@ -51,7 +53,7 @@ element.appendChild(box);
 
 // 位置！！
 parent.appendChild(element);
-TweenLite.set(element, {position:"absolute", top:"25%", left:"30%", perspective:600, overflow:"visible", zIndex:2000});
+TweenLite.set(element, {position:"absolute", top:"100px", left:"130px", perspective:600, overflow:"visible", zIndex:2000});
 animation.from(box, 0.1, {opacity:0, scale:0.1, ease:Power1.easeOut}, animationOffset);
 while (--i > -1) {
   dot = createDot(i * rotationIncrement);

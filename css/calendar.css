@@ -1,0 +1,57 @@
+.reduce-y,
+.reduce-m,
+.plus-y,
+.plus-m,
+.date {
+  float: left;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.reduce-y:hover,
+.reduce-m:hover,
+.plus-y:hover,
+.plus-m:hover {
+  color: #fff;
+}
+.main-top {
+  padding: 0;
+}
+.top-calendar {
+  width: 230px;
+  margin: 0 auto;
+  /* margin-top: 20px; */
+}
+.plus-y {
+  margin: 0;
+}
+.top-calendar::after {
+  content: '';
+  height: 0;
+  line-height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+.bottom-lest {
+  float: left;
+  width: 100%;
+}
+#day {
+  /* float: left; */
+  width: 100%;
+}
+#day li:hover {
+  background-color: rgba(54, 227, 250, 0.363);
+}
+#day .buld-li {
+  background-color: rgba(54, 227, 250, 0.363);
+}
+#day li {
+  float: left;
+  height: 22px;
+  width: calc(100% / 7);
+}
+.bottom-lest li {
+  float: left;
+  width: calc(100% / 7);
+}
