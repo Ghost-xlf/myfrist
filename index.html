@@ -4,15 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>热心市民小许的</title>
+  <link rel="stylesheet" href="./css/iconfont/iconfont.css">
   <link rel="stylesheet" href="./css/index.css">
 </head>
 <body class="type-area">
   <header>
-    <div class="header-bgc none"></div>
+    <div class="header-bgc"></div>
   </header>
   <nav class="clearfix">
     <div class="top">
-      <h2>热心市民小许的博客</h2>
+      <h2><a href="">热心市民小许的博客</a></h2>
       <h3>一个刚刚步入社会的小年轻，本博客只是记录自己成长，勿喷</h3>
       <h3>如有问题可联系邮箱</h3>
       <h3>1149775690@qq,com</h3>
@@ -24,15 +25,15 @@
       <img src="./images/tb.1.a93fd1b0.jpg" alt="">
       <h4>热心小许</h4>
       <p>醉后不知天在水，满床清梦压星河</p>
-      <div><span class="number">1</span>篇</div>
+      <div class="number"><span class="number-sp">1</span>篇</div>
       <div class="connect">
         <div>
-          <a href="">1</a>
-          <a href="">2</a>
+          <a href="https://lol.qq.com/main.shtml"><i class="iconfont">&#xe612;</i> 只是爱好</a>
+          <a href="https://im.qq.com/"><i class="iconfont">&#xe6ca;</i> 腾讯QQ</a>
         </div>
         <div>
-          <a href="">3</a>
-          <a href="">4</a>
+          <a href="https://github.com/"><i class="iconfont">&#xe63a;</i> Github</a>
+          <a href="https://weibo.com/"><i class="iconfont">&#xe61f;</i> 微博</a>
         </div>
       </div>
       <div class="calendar">
@@ -55,12 +56,16 @@
   </nav>
   <main class="clearfix">
     <div class="article">
-      <h2>介绍</h2>
+      <h2 class="clearfix"><span class="title">介绍</span></h2>
       <p>第一次写自己的网页希望自己收悉自己网页的每一个功能，自己更新和删查，后续可能会使用Hexo框架搭建自己的博客。
-        </p>
+         下次更新需要进行响应式的排布 适应不同的屏幕尺寸
+         给笔记部分添加显示全文按钮 1（跳转至其他页面）2（在本页面进行显示）  
+      </p>
+      <div class="all">V显示全部</div>
+      <div class="retract none">Λ收起</div>
     </div>
     <div class="article">
-      <h2>第一篇笔记</h2>
+      <h2 class="clearfix"><span class="title">第一篇笔记</span></h2>
       <p>Math.PI      // 圆周率
         Math.random()    // 生成随机数 （根据*10 之类的运算）范围 0~1
         Math.floor()/Math.ceil()  //  向下取整/向上取整
@@ -69,20 +74,70 @@
         Math.max()/Math.min()   // 求最大和最小值（不能放入数组）
         Math.pow(2, 3)/Math.sqrt(25)  // 求指数次幂/求平方根
         浮点数精度过高   所以浮点数不参与运算和判断  只显示</p>
+        <div class="all">V显示全部</div>
+        <div class="retract none">Λ收起</div>
     </div>
     <div class="article">
-      <h2></h2>
+      <h2 class="clearfix"><span class="title">AJAX</span></h2>
+      <p>
+        AJAX：
+var  xhttp = null;    创建空对象，
+xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');     //使用post传输,
+if (window.XMLHttpRequest) {
+    xhttp = new XMLHttpRequest();          //使用AJAX需先创建
+    } else {
+    // code for IE6, IE5
+     xhttp = new ActiveXObject("Microsoft.XMLHTTP");  
+}
+
+open(method,url,async,user,psw) //规定一个请求
+          method:  请求类型  get 、post
+          url: 文件位置（后端）
+          async（可选）：true（默认）异步  false（同步）
+ 
+send()     //  将请求发送     ！一个open对应一个send()选择上面
+                                               离的最近的open
+                    若open内method属性为get 则发送的内容写在url
+                    后用？连接
+                    若open内method属性为post则所要传输的内容写
+                    在send()括号里面 ps如果是对象的话需要进行转换
+                     obj = JSON.stringify(obj)   //转换为字符串
+                     obj = JSON.parse(obj)    //转换成对象
+
+
+responseText    //   获取已子字符串形式返回的数据
+
+onreadystatechange    //定义了当 readyState 属性发生改变时所
+                                     调用的函数。
+
+readyState      //   保存了XMLHttpRequest的状态
+                             · 0：请求未初始化     。。请求为定义
+                             · 1：服务器连接已建立。send发送
+                             · 2：请求以已接收。
+                             · 3：正在处理请求。
+                             · 4：请求已完成且响应已就绪。
+status             //返回Http 状态    200 202.。。。。
+statusText      // 返回状态文本    200->OK
+                             但要执行数据传递完后的动作需要添加判定
+                             this.readyState == 4 && this.status == 200
+
+
+
+        
+      </p>
+      <div class="all">V显示全部</div>
+      <div class="retract none">Λ收起</div>
+    </div>
+    <div class="article">
+      <h2 class="clearfix"><span class="title"></span></h2>
       <p></p>
     </div>
     <div class="article">
-      <h2></h2>
-      <p></p>
-    </div>
-    <div class="article">
-      <h2></h2>
+      <h2 class="clearfix"><span class="title"></span></h2>
       <p></p>
     </div>
   </main>
+  <script src="./js/rem.js"></script>
   <script src="./js/index.js"></script>
   <script src="./js/calendar.js"></script>
   <script src="./js/TweenMax.min.js"></script>

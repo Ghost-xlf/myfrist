@@ -53,7 +53,7 @@ element.appendChild(box);
 
 // 位置！！
 parent.appendChild(element);
-TweenLite.set(element, {position:"absolute", top:"100px", left:"130px", perspective:600, overflow:"visible", zIndex:2000});
+TweenLite.set(element, {position:"absolute", top:"1rem", left:"1.3rem", perspective:600, overflow:"visible", zIndex:2000});
 animation.from(box, 0.1, {opacity:0, scale:0.1, ease:Power1.easeOut}, animationOffset);
 while (--i > -1) {
   dot = createDot(i * rotationIncrement);
