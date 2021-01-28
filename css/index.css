@@ -99,7 +99,8 @@ p {
   background-color: rgba(0, 0, 0, 0.8);
 }
 .indexes {
-  height: 0;
+  display: none;
+  height: 0rem;
   transition: all 0.6s;
   overflow: hidden;
 }
