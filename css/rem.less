@@ -1,0 +1,13 @@
+@widthWeb: 320px,360px,375px,384px,412px,414px,720px,768px,800px,1024px;
+@n: length(@widthWeb);
+@designWidth:                    1920px;
+each(@widthWeb, {
+  @widthMax:@value;
+  @media(min-width:@widthMax) {
+    html {
+      font-size:(@widthMax/@designWidth)*100;
+    }
+  }
+})
+
+

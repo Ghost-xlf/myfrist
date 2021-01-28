@@ -1,7 +1,6 @@
 var name_top = document.querySelector(".name")
 document.querySelector("body").onscroll = function() {
  var px = Math.round(document.documentElement.scrollTop);
- console.log(px);
  if(px >= 265) {
   var top = px;
   name_top.setAttribute('style','top'+':'+top+"px")
@@ -24,6 +23,15 @@ for(let i= 0; i< retract.length ;i++) {
     this.parentNode.style.height = 3 + "rem";
     this.classList.add("none");
     this.previousSibling.previousSibling.classList.remove("none");
+  }
+}
+var navI = document.querySelector(".navI");
+var indexes_ = document.querySelector(".indexes");
+navI.onclick = function(e) {
+  if(indexes_.style.height === "5rem") {
+    indexes_.setAttribute("style","height:0")
+  }else {
+    indexes_.setAttribute("style","height:5rem")
   }
 }
 

@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "17542110",
+      "name": "导航",
+      "font_class": "daohang",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    },
+    {
       "icon_id": "4294454",
       "name": "分类-英雄联盟",
       "font_class": "fenlei-yingxionglianmeng",

@@ -1,0 +1,50 @@
+@media (min-width: 320px) {
+  html {
+    font-size: 16.66666667px;
+  }
+}
+@media (min-width: 360px) {
+  html {
+    font-size: 18.75px;
+  }
+}
+@media (min-width: 375px) {
+  html {
+    font-size: 19.53125px;
+  }
+}
+@media (min-width: 384px) {
+  html {
+    font-size: 20px;
+  }
+}
+@media (min-width: 412px) {
+  html {
+    font-size: 21.45833333px;
+  }
+}
+@media (min-width: 414px) {
+  html {
+    font-size: 21.5625px;
+  }
+}
+@media (min-width: 720px) {
+  html {
+    font-size: 37.5px;
+  }
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 40px;
+  }
+}
+@media (min-width: 800px) {
+  html {
+    font-size: 41.66666667px;
+  }
+}
+@media (min-width: 1024px) {
+  html {
+    font-size: 53.33333333px;
+  }
+}

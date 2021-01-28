@@ -3,9 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-html {
-  font-size: 18px;
-}
 a {
   text-decoration: none;
 }
@@ -14,7 +11,7 @@ li {
   list-style: none;
 }
 .type-area {
-  width: 12.5rem;
+  width: 20rem;
   margin: 0 auto;
 }
 .clearfix:after {
@@ -59,8 +56,7 @@ p {
   padding: 0;
 }
 .top-calendar {
-  width: 2.3rem;
-  padding-left: 0.2rem;
+  padding-left: 0.3rem;
   margin: 0 auto;
 }
 .plus-y {
@@ -97,9 +93,15 @@ p {
   float: left;
   width: calc(100% / 7);
 }
-header .header-bgc {
+.header-bgc {
+  display: none;
   height: 0.1rem;
   background-color: rgba(0, 0, 0, 0.8);
+}
+.indexes {
+  height: 0;
+  transition: all 0.6s;
+  overflow: hidden;
 }
 nav {
   position: relative;
@@ -172,11 +174,12 @@ nav .number {
   margin-bottom: 0.1rem;
 }
 nav .connect {
-  height: 1rem;
+  height: 1.5rem;
   width: 100%;
   margin-bottom: 0.2rem;
 }
 nav .connect a {
+  font-size: 0.1rem;
   display: inline-block;
   width: 40%;
   color: #000;
@@ -235,7 +238,10 @@ main .article p {
   height: 70%;
   margin: 0 auto;
   text-align: left;
-  overflow: hidden;
+  overflow: auto;
+}
+main .article p::-webkit-scrollbar {
+  display: none;
 }
 main .article .all {
   position: absolute;
@@ -254,4 +260,66 @@ main .article .retract {
 }
 main .article .retract:hover {
   color: #7e7e7e;
+}
+@media (max-width: 1000px) {
+  .header-bgc {
+    display: block;
+    position: relative;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .header-bgc h2 {
+    font-size: 0.6rem;
+    padding-top: 0.1rem;
+    margin-bottom: 0.1rem;
+    text-align: center;
+    color: #ffffff;
+  }
+  .header-bgc p {
+    color: #fff;
+    text-align: center;
+  }
+  .header-bgc .navI {
+    position: absolute;
+    left: 0.8rem;
+    bottom: 1.2rem;
+    font-size: 0.6rem;
+    color: #fff;
+    cursor: pointer;
+  }
+  .header-bgc .navI:hover {
+    color: #000;
+  }
+  .indexes {
+    display: block;
+    margin-bottom: 0.2rem;
+    padding-top: 0.1rem;
+    text-align: center;
+  }
+  .indexes img {
+    height: 3.2rem;
+    border-radius: 50%;
+    transition: all 0.6s;
+  }
+  .indexes img:hover {
+    transform: rotate(365deg);
+  }
+  .indexes p {
+    margin-bottom: 0.1rem;
+  }
+  .indexes p a {
+    display: inline-block;
+    width: 40%;
+    color: #000;
+  }
+  .indexes p a:hover {
+    color: rgba(0, 0, 0, 0.39);
+  }
+  nav {
+    display: none;
+    float: none;
+  }
+  main {
+    width: 100%;
+  }
 }

@@ -5,12 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>热心市民小许的</title>
   <link rel="stylesheet" href="./css/iconfont/iconfont.css">
+  <link rel="stylesheet" href="./css/rem.css">
   <link rel="stylesheet" href="./css/index.css">
 </head>
 <body class="type-area">
   <header>
-    <div class="header-bgc"></div>
+    <div class="header-bgc">
+      <h2>热心市民小许|博客</h2>
+      <p>日常笔记</p>
+      <p>救救可怜的孩子吧</p>
+      <div><i class="iconfont navI">&#xe634;</i></div>
+    </div>
   </header>
+  <div class="indexes">
+    <img src="./images/tb.1.a93fd1b0.jpg" alt=""/>
+    <p><a href="https://im.qq.com/"><i class="iconfont">&#xe6ca;</i> 腾讯QQ</a><a href="https://lol.qq.com/main.shtml"><i class="iconfont">&#xe612;</i> 只是爱好</a></p>
+    <p><a href="https://github.com/"><i class="iconfont">&#xe63a;</i> Github</a><a href="https://weibo.com/"><i class="iconfont">&#xe61f;</i> 微博</a></p>
+  </div>
   <nav class="clearfix">
     <div class="top">
       <h2><a href="">热心市民小许的博客</a></h2>
@@ -52,6 +63,7 @@
          </ul>
         </div>
       </div>
+      
     </div>
   </nav>
   <main class="clearfix">
@@ -129,6 +141,55 @@ statusText      // 返回状态文本    200->OK
       <div class="retract none">Λ收起</div>
     </div>
     <div class="article">
+      <h2 class="clearfix"><span class="title">npm一些简单使用</span></h2>
+      <p>npm i less -q    全局
+        npm i less --save-dev  当前路径
+        选择版本  less@？？？ （版本号）
+        
+        cd ? 跳转指定路径
+        cd ../ 上一层
+        
+        nev use 切换指定版本号
+        
+        
+        
+        npm init  package初始化
+        npm i express  安装常用WEB框架express
+         npm uninstall express 卸载该模块
+        npm update express 更新该模块
+        npm search express 搜索该模块
+        
+        
+        IP 获取
+        ipconfig</p>
+        <div class="all">V显示全部</div>
+        <div class="retract none">Λ收起</div>
+    </div>
+    <div class="article">
+      <h2 class="clearfix"><span class="title">Github命令</span></h2>
+      <p>git clone -b 分支 URL  --克隆代码
+        git pull origin 分支名    --更新
+        git status     --检查是否有更新
+        git add -A    --所有修改创建虚拟仓库
+        git commit -am "备注"    --所有修改提交到虚拟仓库
+        git push origin brand    --push到仓库分支    brand为分支名 dev
+        检查版本号：git log -1（数字1为上一个版本）
+        版本回退：git reset --hard abcdefg（选择需要回退的版本号）
+         
+        检查当前分支名称： git branch
+        创建分支：git checkout -b develop（创建develop分支）</p>
+      <div class="all">V显示全部</div>
+      <div class="retract none">Λ收起</div>
+    </div>
+    <div class="article">
+      <h2 class="clearfix"><span class="title"></span></h2>
+      <p></p>
+    </div>
+    <div class="article">
+      <h2 class="clearfix"><span class="title"></span></h2>
+      <p></p>
+    </div>
+    <div class="article">
       <h2 class="clearfix"><span class="title"></span></h2>
       <p></p>
     </div>
@@ -137,7 +198,7 @@ statusText      // 返回状态文本    200->OK
       <p></p>
     </div>
   </main>
-  <script src="./js/rem.js"></script>
+  <!-- <script src="./js/rem.js"></script> -->
   <script src="./js/index.js"></script>
   <script src="./js/calendar.js"></script>
   <script src="./js/TweenMax.min.js"></script>
