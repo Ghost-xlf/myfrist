@@ -63,6 +63,12 @@
          </ul>
         </div>
       </div>
+      <div class="fax">
+        <select name="" id="province">
+        </select>
+        <select name="" id="city"></select>
+        <select name="" id="area"></select>
+      </div>
       
     </div>
   </nav>
@@ -204,5 +210,62 @@ statusText      // 返回状态文本    200->OK
   <script src="./js/TweenMax.min.js"></script>
   <script src="./js/Preloader.js"></script>
   <script src="./js/s.js"></script>
+  <script>
+    var province = document.querySelector("#province");
+    var city = document.querySelector("#city");
+    var area = document.querySelector("#area");
+    // 空的省级对象
+    var provinceText=[];   
+    // 空的市级对象 
+    var cityText = null;
+    // 空的区对象
+    var areaText = null;
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("get","china.json",true);
+    xhttp.send();
+    xhttp.onreadystatechange = function() {
+      if(this.readyState == 4 && this.status == 200) {
+         var text = xhttp.responseText;
+         text = JSON.parse(text);
+         provinceText = text;
+         console.log(text);
+         // 将第一曾的数据放入下拉菜单中
+         for(let i = 0 ; i < provinceText.length ; i++) {
+          var name = provinceText[i].name;
+          var option = document.createElement("option");
+          // oprion.setAttribute("value",)
+          option.innerHTML = name;
+          province.appendChild(option);
+        }
+      }
+    }
+    var indexA ;
+    province.onchange = function() {
+      city.innerHTML = "";
+      area.innerHTML = "";
+      var index = province.selectedIndex;
+      var children = provinceText[index].children;
+          indexA = index;
+          for(let i = 0 ; i < children.length ; i++) {
+            var name = children[i].name;
+            var option = document.createElement("option");
+                option.innerHTML = name;
+                city.appendChild(option); 
+          }
+    }
+    city.onchange = function() {
+      area.innerHTML = "";
+      var index = city.selectedIndex;
+      var childrenA = provinceText[indexA].children;
+      var children = childrenA[index].children;
+          for(let i = 0 ; i < children.length ; i++) {
+            var name = children[i].name;
+            var option = document.createElement("option");
+                option.innerHTML = name;
+                area.appendChild(option);
+          }
+    }
+
+  </script>
 </body>
 </html>

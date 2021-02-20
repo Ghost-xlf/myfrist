@@ -141,6 +141,7 @@ nav .po {
 }
 nav .name {
   position: absolute;
+  width: 100%;
   padding-left: 0.1rem;
   padding-right: 0.1rem;
   margin-top: 0.2rem;
